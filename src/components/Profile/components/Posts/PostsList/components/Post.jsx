@@ -1,9 +1,9 @@
 import React from 'react';
 import classes from './Post.module.css';
 
-const Post = (key) => {
+const Post = () => {
     return (
-        <div className={classes.post}>Post №{key}</div>
+        <div className={classes.post}>Post №</div>
     )
 }
 
