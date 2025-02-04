@@ -5,10 +5,10 @@ import Post from './components/Post';
 const PostsList = () => {
     return (
         <div className={classes.list}>
-            <Post key={1}/>
-            <Post key={2}/>
-            <Post key={3}/>
-            <Post key={4}/>
+            <Post id='1'/>
+            <Post id='2'/>
+            <Post id='3'/>
+            <Post id='4'/>
         </div>
     )
 }
