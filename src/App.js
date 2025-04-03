@@ -5,7 +5,7 @@ import Header from './components/Header/Header';
 import Sidebar from './components/SideBar/SideBar'
 import Profile from './components/Profile/Profile'
 import Messenger from './components/Messenger/Messenger'
-import { BrowserRouter, Route } from 'react-router-dom';
+import { BrowserRouter, Route, Routes } from 'react-router-dom';
 
 function App() {
   return (
@@ -14,9 +14,10 @@ function App() {
             <Header />
             <Sidebar />
             <div className="app-wrapper-content">
-                <Route path="/profile" component={Profile} />
-                <Route path="/messenger" component={Messenger} />
-                <Profile />
+                <Routes>
+                    <Route path="/profile" Component={Profile} />
+                    <Route path="/messenger" Component={Messenger} />
+                </Routes>
             </div>
         </div>
     </BrowserRouter>
