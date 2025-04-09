@@ -1,9 +1,10 @@
 import React from 'react';
 
-const DialogWindow = () => {
+const DialogWindow = (props) => {
+    let messages = props.messages;
     return (
         <div>
-            Тут будет ваша переписка
+            {messages.map(m => <div>{m.value}</div>)}
         </div>
     )
 }
