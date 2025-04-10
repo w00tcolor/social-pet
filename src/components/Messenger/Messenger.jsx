@@ -8,8 +8,8 @@ const Messenger = (props) => {
 
     return (
         <div>
-            <DialogsList dialogs={props.dialogs}/>
-            <DialogWindow messages={props.messages}/>
+            <DialogsList dialogs={props.state.dialogsArr}/>
+            <DialogWindow messages={props.state.messagesArr}/>
         </div>
     )
 }
