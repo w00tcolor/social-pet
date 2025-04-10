@@ -3,11 +3,13 @@ import React from 'react';
 import DialogWindow from './DialogWindow/DialogWindow';
 import DialogsList from './DialogList/DialogList';
 
-const Messenger = () => {
+const Messenger = (props) => {
+    
+
     return (
         <div>
-            <DialogsList />
-            <DialogWindow />
+            <DialogsList dialogs={props.dialogs}/>
+            <DialogWindow messages={props.messages}/>
         </div>
     )
 }

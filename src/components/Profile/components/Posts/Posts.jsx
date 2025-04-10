@@ -2,11 +2,11 @@ import React from 'react';
 import PostsCreateForm from './PostsCreateForm/PostsCreateForm';
 import PostsList from './PostsList/PostsList';
 
-const Posts = () => {
+const Posts = (props) => {
     return (
         <div className='posts'>
             <PostsCreateForm />
-            <PostsList />
+            <PostsList posts={props.posts}/>
         </div>
     )
 }
