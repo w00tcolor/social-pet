@@ -11,7 +11,7 @@ const Profile = (props) => {
         <div className={classes.content}>
             <Hat />
             <ProfileInfo />
-            <Posts posts={props.state.postsArr}/>            
+            <Posts posts={props.state.postsArr} addPost={props.addPost}/>            
         </div>
     );
 }

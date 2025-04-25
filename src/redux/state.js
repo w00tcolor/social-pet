@@ -24,4 +24,12 @@ let state = {
     
 }
 
+export const addPost = (value) => {
+    let newPost = {
+        id: 'post5', author: 'John Doe', text: `${value}`, likesCount: '0'
+    }
+
+    state.profilePage.postsArr.push(newPost);
+};
+
 export default state;
