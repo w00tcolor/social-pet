@@ -5,7 +5,7 @@ import PostsList from './PostsList/PostsList';
 const Posts = (props) => {
     return (
         <div className='posts'>
-            <PostsCreateForm />
+            <PostsCreateForm addPost={props.addPost}/>
             <PostsList posts={props.posts}/>
         </div>
     )
