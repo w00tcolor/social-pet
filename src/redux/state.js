@@ -1,3 +1,5 @@
+import { renderEntireTree } from "../render";
+
 let state = {
     profilePage: {
         postsArr: [
@@ -30,6 +32,7 @@ export const addPost = (value) => {
     }
 
     state.profilePage.postsArr.push(newPost);
+    renderEntireTree(state, addPost);
 };
 
 export default state;

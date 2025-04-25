@@ -7,7 +7,6 @@ const PostsCreateForm = (props) => {
     let getPostValue = () => {
         let result = value.current.value; 
         props.addPost(result);
-        alert(result)
     }
     
     return (
