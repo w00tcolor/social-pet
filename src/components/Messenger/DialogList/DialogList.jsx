@@ -5,7 +5,7 @@ const DialogsList = (props) => {
     let dialogs = props.dialogs;
     return (
         <ul>
-            {dialogs.map(d => <li className={classes.dialogLink} id={d.id}>{d.name}</li>)}
+            {dialogs.map(d => <li className={classes.dialogLink} id={d.id}><a href="#">{d.name}</a></li>)}
         </ul>
     )
 }

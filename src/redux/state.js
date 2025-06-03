@@ -1,5 +1,7 @@
 const ADD_POST = 'ADD_POST'
 const UPDATE_NEW_POST_VALUE = 'UPDATE_NEW_POST_VALUE'
+const UPDATE_DIALOGS_FORM_VALUE = 'UPDATE_DIALOGS_FORM_VALUE'
+const SEND_MESSAGE = 'SEND_MESSAGE'
 
 let store = {
     _state: {
@@ -25,6 +27,7 @@ let store = {
             {value: 'nice'},
             {value: 'well done'},
             ],
+            newMessageValue: '',
         },
     },
     getState() {
@@ -48,10 +51,22 @@ let store = {
         } else if (action.type === 'UPDATE_NEW_POST_VALUE') {
             this._state.profilePage.newPostValue = action.newText;
             this._callSubscriber(this._state);
+        } else if (action.type === 'UPDATE_DIALOGS_FORM_VALUE') {
+            this._state.messagesPage.newMessageValue = action.newText;
+            this._callSubscriber(this._state);
+        } else if (action.type === 'SEND_MESSAGE') {
+            let mewMessage = {
+                value: `${this._state.messagesPage.newMessageValue}`
+            };
+            this._state.messagesPage.messagesArr.push(mewMessage);
+            this._state.messagesPage.newMessageValue = '';
+            this._callSubscriber(this._state);
         }
     }
 }
 
 export const addPostActionCreator = () => ({type: ADD_POST});
 export const updateNewPostValueActionCreator = (text) => ({type: UPDATE_NEW_POST_VALUE, newText: text});
+export const updateDialogFormValueActionCreator = (text) => ({type: UPDATE_DIALOGS_FORM_VALUE, newText: text})
+export const sendMessageActionCreator = () => ({type: SEND_MESSAGE})
 export default store;
