@@ -1,6 +1,6 @@
 import React from 'react';
 import classes from './PostsCreateForm.module.css';
-import { addPostActionCreator, updateNewPostValueActionCreator } from '../../../../../redux/state';
+import { addPostActionCreator, updateNewPostValueActionCreator } from '../../../../../redux/profile-reducer';
 import { TextArea } from '../../../../../styled/components';
 
 const PostsCreateForm = (props) => {

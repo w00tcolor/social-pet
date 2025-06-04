@@ -1,5 +1,5 @@
 import React from 'react';
-import { updateDialogFormValueActionCreator, sendMessageActionCreator } from '../../../../redux/state';
+import { updateDialogFormValueActionCreator, sendMessageActionCreator } from '../../../../redux/messenger-reducer';
 import { TextArea } from '../../../../styled/components';
 
 const DialogForm = (props) => {
